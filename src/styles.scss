@@ -1,0 +1,111 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@300&display=swap");
+
+$main-color:#0aad0a;
+$light-color:#f0f3f2;
+$shadow: rgba(145, 158, 171, 0.2) 0px 2px 4px -1px,
+rgba(145, 158, 171, 0.14) 0px 4px 5px 0px,
+rgba(145, 158, 171, 0.12) 0px 1px 10px 0px;
+$rating-color: #ffc908;
+
+$font-family: "Encode Sans Expanded",
+sans-serif;
+$main-transition:0.8s;
+
+
+body {
+    font-family: $font-family;
+
+}
+.text-main {
+    color: $main-color
+}
+.text-main-light{
+    color: $light-color
+}
+.bg-main-light {
+    background-color: $light-color
+}
+.bg-main {
+    background-color: $main-color
+}
+.rating-color{
+    color:$rating-color
+}
+
+.font-sm {
+    font-size: 12px;
+}
+.btn-main {
+    background-color: $main-color;
+    padding: 7px 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+   &:disabled{
+    background-color: #0aad0a72;
+    cursor: not-allowed;
+    color: #f0f3f28b;
+   }
+}
+
+   .product {
+       border-radius: 5px;
+       border: solid 1px $main-color;
+     box-shadow: $shadow;
+       overflow: hidden;
+       padding: 4px;
+       position: relative;
+&:hover{
+.heart{
+    right: 5px;
+}
+}
+
+    .heart {
+    
+            font-size: 40px;
+            position: absolute;
+            top: 5px;
+            right: -50px;
+            z-index: 99;
+            cursor: pointer;
+            transition: 0.7s;
+        }
+
+   }
+
+.active-link{
+    color: #fff !important;
+    background-color: $main-color !important;
+    border-radius: 5px !important;
+}
+
+.product {
+    overflow: hidden;
+
+    &:hover {
+
+        .btn-main {
+
+            transform: translateY(-2%);
+            opacity: 1;
+
+        }
+
+
+    }
+
+    .btn-main {
+
+        transform: translateY(150%);
+        transition: 0.7s;
+        opacity: 0;
+
+    }
+
+
+
+}
+
